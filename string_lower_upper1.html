@@ -1,0 +1,25 @@
+<!-- Convert the string into lower and uppercase when click on respective radio button(merthod-2)-->
+   <!-- Program Write By:-Riya Munot -->
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Upper Lower</title>
+            <script type="text/javascript">
+                function Upper(form1){
+                    var str=form1.txstr.value;
+                    form1.txstr.value=str.toUpperCase();
+                }
+                function Lower(form1){
+                    var str=form1.txstr.value;
+                    form1.txstr.value=str.toLowerCase();
+                }
+            </script>
+        </head>
+        <body>
+            <form>
+                Enter String<input type="text" name="txstr" id="txstr"><br>
+                Upper Case<input type="radio" name="rd1" id="rd1" onclick="Upper(this.form)"><br>
+                Lower Case<input type="radio" name="rd2" id="rd2" onclick="Lower(this.form)">
+            </form>
+        </body>
+    </html>

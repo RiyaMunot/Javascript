@@ -1,0 +1,39 @@
+<!-- Display the values of all checked check box -->
+<!-- Program Write By:-Riya Munot -->
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>Checked Box</title>
+        <script type="text/javascript">
+            function show()
+            {
+                var str="Selected Course:-<br>";
+                var chk=document.getElementsByName("ch");
+                for(i=0;i<chk.length;i++){
+                    if(chk[i].checked)
+                    {
+                       str=str+chk[i].value+"<br>";
+                    }
+                }
+                document.getElementById("txres").innerHTML=str;
+                
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+        Maths<input type="checkbox" name="ch" id="ch" value="Maths"><br>
+        English<input type="checkbox" name="ch" id="ch" value="English"><br>
+        Science<input type="checkbox" name="ch" id="ch" value="Science"><br>
+        Physics<input type="checkbox" name="ch" id="ch" value="Physics"><br>
+        Computers<input type="checkbox" name="ch" id="ch" value="Computers"><br>
+        Biology<input type="checkbox" name="ch" id="ch" value="Biology"><br>
+        <input type="button" value="Show" name="but" onclick="show();">   
+    </form>
+    <div id="txres"></div>
+
+    </body>
+ </html>
+
+
+

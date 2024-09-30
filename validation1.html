@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validation</title>
+        <script type="text/javascript">
+        function validation(form1)
+        {
+            var str=form1.txuname.value;
+            var flag=true;
+            var errormsg=" ";
+            if(str.length==0)
+        {
+            errormsg="Enter Your User Name";
+            flag=false;
+        }
+        str=form1.txp.value;
+        if(str.length==0)
+        {
+            errormsg="Enter Password";
+            flag=false;
+
+        }
+        else if(str.length < 6 || str.length > 10)
+        {
+            errormsg="Password should have 6 to 10 char only.";
+            flag=false;
+        }
+        str=form1.txcontactno.value;
+        if(str.length==0)
+        {
+            errormsg="Enter Contact Number";
+            flag=false;
+        }
+        else if(str.length!=10)
+        {
+            errormsg="Contact number should be 10 digit only";
+            flag=false;
+        }
+        str=form1.txemail.value;
+        if(str.length==0)
+        {
+            errormsg="Enter Email Address";
+            flag=false;
+        }
+        else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(str))
+
+        {
+            errormsg="Enter  valid email id";
+            flag=false;
+        }
+        if(!flag)
+        {
+            document.getElementById("error").innerHTML=errormsg;
+        }
+        else
+        {
+            document.getElementById("error").innerHTML=" ";
+        }
+
+
+        }
+        </script>
+    </head>
+    <body>
+        <div id="error"></div>
+        <form>
+            Enter Username <input type="text" name="txuname"><br>
+            Enter Password <input type="password" name="txp"><br>
+            Enter Contact Number <input type="number" name="txcontactno"><br>
+            Enter Email <input type="email" name="txemail"><br>
+            <input type="button" name="but" value="check" onclick="validation(this.form)">
+        </form>
+    </body>
+</html>

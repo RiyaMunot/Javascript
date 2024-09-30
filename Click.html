@@ -1,0 +1,40 @@
+<!-- Write a program to convert string when click on convert button as follows
+1. If Uppercase radio Button selected then convert string into uppercase
+2. If Lowercase radio button selected then convert string into lowercase 
+-->
+ <!-- Program Write By:-Riya Munot -->
+  <!DOCTYPE html>
+  <html>
+    <head>
+        <title>Click Button </title>
+        <script>
+            function Upper()
+            {
+                var str=document.getElementById("txstr").value;
+                document.getElementById("txstr").value=str.toUpperCase();
+            }
+            function Lower()
+            {
+                var str=document.getElementById("txstr").value;
+                document.getElementById("txstr").value=str.toLowerCase();
+            }
+            function checked(){
+                if(document.getElementById('rd1').checked)
+                {
+                    Upper()
+                }
+                else if(document.getElementById('rd2').checked)
+                Lower()
+            }
+            
+        </script>
+    </head>
+    <body>
+        <form>
+            Enter String<input type="text" name="txstr" id="txstr"><br>
+            Upper Case<input type="radio" name="rd1" id="rd1" ><br>
+            Lower Case<input type="radio" name="rd2" id="rd2"><br>
+            <button type="button" name="but" onclick="checked()">Convert</button>
+        </form>
+        </body>
+  </html>

@@ -1,0 +1,29 @@
+<!-- Display All the selected courses using dropdoen list -->
+ <!-- Program Write By:-Riya Munot -->
+  <!DOCTYPE html>
+  <html>
+    <head>
+        <title>Dropdown</title>
+        <script type="text/javascript">
+            function dispaly(form1)
+            {
+                var str=form1.lst.value;
+                document.getElementById("show").innerHTML=str;           
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            Select Course<select name="lst" id="lst">
+                <option>C</option>
+                <option>C++</option>
+                <option>Java</option>
+                <option>Python</option>
+                <option>Php</option>
+                <option>React</option>
+            </select>
+            <input type="button" value="show" name="but" onclick="dispaly(this.form);">
+        </form>
+        <span id="show"></span>
+    </body>
+  </html>

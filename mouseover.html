@@ -1,0 +1,30 @@
+<!-- Change the color of button when mouse is over and out from button -->
+   <!-- Program Write By:-Riya Munot -->
+    
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>MouseOver</title>
+        <script type="text/javascript">
+            function show1()
+            {
+                var but=document.getElementById("but1");
+                but1.style="background-color:blue";
+            }
+            function show2()
+            {
+                var but=document.getElementById("but2");
+                but2.style="background-color:blue";
+            }
+            function show(but){
+                but.style="background-color:red";
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="button" name="but" id="but1" onmouseover="show1();" onmouseout="show(this);" value="Button1" style="background-color: red;">
+            <input type="button" name="but" id="but2" onmouseover="show2();" onmouseout="show(this);" value="Button2" style="background-color: red;">
+        </form>
+    </body>
+ </html>

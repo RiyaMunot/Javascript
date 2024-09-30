@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Validation</title>
+        <style type="text/css">
+            .error1{
+                color:red;
+                font-size: 10 px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        </style>
+        <script type="text/javascript">
+            function Validation(form1)
+            {
+                var str1=form1.txname.value;
+                var flag=true;
+                if(str1.length==0)
+                {
+                    document.getElementById("id1").innerHTML="Enter Name First";
+                    flag=false;
+                }
+                else
+                {
+                    document.getElementById("id1").innerHTML=" ";
+                }
+                if(!form1.rd[0].checked && !form1.rd[1].checked)
+                {
+                    document.getElementById("id2").innerHTML="Select Gender";
+                    flag=false;
+                }
+                else
+                {
+                    document.getElementById("id2").innerHTML=" ";
+                }
+                flag1=false;
+                for(var i=0;i<form1.ch.length;i++)
+                {
+                    if(form1.ch[i].checked)
+                    flag1=true;
+                }
+                if(!flag1)
+                {
+                    document.getElementById("id3").innerHTML="Select Course";
+                    flag=false;
+
+                }
+                else{
+                    document.getElementById("id3").innerHTML=" ";
+                }
+                str1=form1.ls.value;
+                if(str1=="Select city"){
+                    document.getElementById("id4").innerHTML="Select City";
+                    flag=false;
+                }
+                else{
+                    document.getElementById("id4").innerHTML=" ";
+                }
+                return flag;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            Enter Name <input type="text" name="txname">
+            <div id="id1" class="error1"></div><br>
+            Select Gender <input type="radio" name="rd" value="Male">Male
+            <input type="radio" name="rd" value="Female">Female
+            <div id="id2" class="error1"></div><br>
+            Select Courses:<br>
+            <input type="checkbox" name="ch" value="C">C<br>
+            <input type="checkbox" name="ch" value="CPP">CPP<br>
+            <input type="checkbox" name="ch" value="JAVA">JAVA<br>
+            <input type="checkbox" name="ch" value="HTML">HTML<br>
+            <div id="id3" class="error1"></div><br>
+            Select city:<br>
+            <select name="ls" id="ls">
+                <option>Select City</option>
+                <option>Nagar</option>
+                <option>Pune</option>
+                <option>Nashik</option>
+                <option>Mumbai</option>
+            </select>
+            <div id="id4" class="error1"></div><br>
+            <input type="button" name="but" onclick="Validation(this.form)" value="check">
+        </form>
+    </body>
+</html>

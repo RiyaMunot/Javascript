@@ -1,0 +1,23 @@
+<!-- Demo for key Up and Key Down -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Key Up Key Down</title>
+        <script type="text/javascript">
+           function keyupfun(evt) 
+            {
+                alert("Key up is " + evt.key);
+            }
+            function keydownfun(evt) 
+            {
+                alert("Key down is " + evt.key);
+            }
+
+        </script>
+    </head>
+    <body>
+        <form>
+        Enter Text <input type="text" name="tx" onkeyup="keyupfun(event)" onkeydown="keydownfun(event)">
+    </form>
+    </body>
+</html>

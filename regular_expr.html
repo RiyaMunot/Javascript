@@ -1,0 +1,27 @@
+<!-- Regular expression for fierst letter should be in upper case format -->
+ <!-- Code write by :- Riya Munot -->
+  <html>
+    <head>
+        <script type="text/javascript">
+            function validation(form1)
+            {
+            var pattern=/^[A-Z]/;
+            var str=form1.tx.value;
+            if(str.match(pattern))
+            {
+                document.write("OK");
+            }
+            else
+            {
+                document.write("NOT OK");
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="tx"><br>
+            <input type="button" name="but" value="check" onclick="validation(this.form)">
+        </form>
+    </body>
+  </html>

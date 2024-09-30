@@ -1,0 +1,26 @@
+<!-- Demo for object methods -->
+  <!-- Program Write By:-Riya Munot -->
+   <!DOCTYPE html>
+   <html>
+    <head>
+        <title>Object Methods</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            let student={
+                roll_no:1,
+                name:"AAA",
+                percentage:56.78,
+                show:function()
+                {
+                    return "Roll Number="+this.roll_no+"Name="+this.name+"Percentage="+this.percentage;
+                }
+            };
+            document.write(student);
+            document.write("<br>Roll Number=",student.roll_no);
+            document.write("<br>Name=",student["name"]);
+            var str=student.show();
+            document.write("Info of Student=<br>",str)
+        </script>
+    </body>
+   </html>

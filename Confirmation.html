@@ -1,0 +1,26 @@
+<!-- Demo for Confirmation BOx -->
+ <!-- Program write by - Riya Munot -->
+  <html>
+    <head>
+        <title>Confirmation Box</title>
+    </head>
+    <body>
+        <script>
+            var n,f=1;
+            n=prompt("Enter The Number");
+            if(confirm("Do you want to calculate factorial"))
+            {
+                while(n>0)
+                {
+                    f=f*n;
+                    n--;
+                }
+                document.write("Factoral=",+f);
+            }
+            else
+            {
+                alert("You Cancelled The Process");
+            }
+        </script>
+    </body>
+  </html>

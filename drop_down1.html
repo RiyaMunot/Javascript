@@ -1,0 +1,36 @@
+<!-- Display all the selected values of drodown list -->
+  <!-- Program Write By:-Riya Munot -->
+   <!DOCTYPE html>
+   <html>
+    <head>
+        <title>Dropdown-1</title>
+        <script type="text/javascript">
+            function show(form1){
+            var str="Selected Courses Are:-<br>";
+            for(var i=0;i<form1.lst.length;i++)
+            {
+            if(form1.lst[i].selected)
+            {
+                str=str+form1.lst[i].value+"<br>";
+            }
+        }
+            document.getElementById("show").innerHTML=str;
+
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <select name="lst" id="lst" multiple size="5">
+                <option=>C</option>
+                <option >C++</option>
+                <option >Java</option>
+                <option >Python</option>
+                <option >Php</option>
+                <option>React</option>
+            </select>
+            <input type="button" name="but" value="Show" onclick="show(this.form);">
+        </form>
+        <span id="show"></span>
+    </body>
+   </html>

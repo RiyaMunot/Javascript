@@ -1,0 +1,23 @@
+<!-- Enter Only alphabates to check it at key press event. -->
+   <!-- Program Write By:-Riya Munot -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Key Pressed</title>
+    <script type="text/javascript">
+        function checkalpha(evt)
+        {
+            var keycode=(evt.which)?evt.which:evt.keycode;
+            if(keycode>=65 && keycode==90 || keycode>97 && keycode<=122)
+            return true;
+            else
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        Enter Name:<input type="text" name="txname" placeholder="Enter Name" onkeypress="return checkalpha(event)">
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!-- calculate square and cube when focus is loose from number box -->
+   <!-- Program Write By:-Riya Munot -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>onBlur Event</title>
+        <script type="text/javascript">
+            function cal(form1)
+            {
+                var a;
+                a=form1.tx.value;
+                form1.txc.value=a*a*a;
+                form1.txs.value=a*a;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            Enter Number <input type="text" name="tx" onBlur="cal(this.form)"><br>
+            Square<input type="text" name="txs" ><br>
+            Cube<input type="text" name="txc" ><br>
+        </form>
+    </body>
+</html>

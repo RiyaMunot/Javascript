@@ -1,0 +1,19 @@
+<!-- calculate area of circle when focus reached to area text box(merthod-2)-->
+   <!-- Program Write By:-Riya Munot -->
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Area demo-3</title>
+            <script type="text/javascript">
+                function area(radius){
+                    document.getElementById('txres').value=(3.14*(radius*radius));
+                }
+            </script>
+        </head>
+        <body>
+            <form>
+            Area of circle: <input type="text" name="txfno" id="txfno"><br>
+            Area<input type="text" name="txres" id="txres"onfocus="area(this.form.txfno.value);"><br>
+        </form>
+        </body>
+    </html>

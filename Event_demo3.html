@@ -1,0 +1,25 @@
+<!-- Write a program for addition of two numbers when click on add button (method 3)-->
+   <!-- Program Write By:-Riya Munot -->
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Event Demo-3</title>
+            <script type="text/javascript">
+                function add(val1,val2){
+                    var n1,n2,sum;
+                    n1=parseInt(val1);
+                    n2=parseInt(val2);
+                    sum=n1+n2;
+                    document.getElementById("res").value=sum;
+                }
+            </script>
+        </head>
+        <body>
+            <form>
+            Enter 1st number: <input type="text" name="txfno" id="txfno"><br>
+            Enter 2nd number<input type="text" name="txsno" id="txsno"><br>
+            Addition:<input type="text" name="res" id="res"><br>
+            <button type="button" onclick="add(this.form.txfno.value,this.form.txsno.value)">Add</button>
+        </form>
+        </body>
+    </html>
